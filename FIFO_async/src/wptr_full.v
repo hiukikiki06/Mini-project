@@ -22,6 +22,7 @@ module wptr_full #(
             wptr_gray <= w_gray_next;
         end
     end
+    
     assign w_bin_next = w_bin + (!w_full & w_en);
     // ĐỔI SANG MÃ GRAY: G = B ^ (B >> 1)
     assign w_gray_next = w_bin_next ^ ( w_bin_next >> 1);
