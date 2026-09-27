@@ -1,0 +1,516 @@
+# vsim -coverage -l sim.log -c top_module_tb "+TESTNAME=tc_10" -voptargs="+cover=bcesft" -assertdebug -do "coverage save -onexit coverage.ucdb; log -r /*; run -all; quit" 
+# Start time: 14:43:50 on Sep 22,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# //  Questa Sim-64
+# //  Version 2021.2_1 linux_x86_64 May 15 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.intf(fast)
+# Loading work.tb_fifo_sync_pkg(fast)
+# Loading work.tc_fifo_sync_pkg(fast)
+# Loading work.top_module_tb(fast)
+# coverage save -onexit coverage.ucdb
+#  log -r /*
+#  run -all
+# T = 0 [ENV] Environment starting components...
+# T = 0 [TB] Chay testcase chi dinh: tc_10
+# 
+# ==================================================
+#   [TESTCASE 10] FIFO Ordering & Pointer Wrap-Around 
+# ==================================================
+# T = 0 [GEN] rst_n = 0, wr_en = 0, rd_en = 0, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 0 [DRV] rst_n = 0, wr_en = 0, rd_en = 0, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 6 [MON] rst_n = 0, wr_en = 0, rd_en = 0, din = 00000000, dout = 00000000, full = 0, empty = 1
+# T = 6 [SCO] PASS TEST dout = 00000000 empty = 1 full = 0
+# --- [TC_10] Round 1: Fill and Drain ---
+# T = 7 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 00010000, dout = 00000000, full = 0, empty = 0
+# T = 10 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 00010000, dout = 00000000, full = 0, empty = 0
+# T = 16 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 00010000, dout = 00000000, full = 0, empty = 0
+# T = 16 [SCO] Write enable accept
+# T = 16 [SCO] Queue = [ 00010000 ]
+# T = 16 [SC0] Size of queue = 1
+# T = 16 [SCO] PASS TEST empty = 0 full = 0
+# T = 17 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 00110000, dout = 00000000, full = 0, empty = 0
+# T = 20 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 00110000, dout = 00000000, full = 0, empty = 0
+# T = 26 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 00110000, dout = 00000000, full = 0, empty = 0
+# T = 26 [SCO] Write enable accept
+# T = 26 [SCO] Queue = [ 00010000 00110000 ]
+# T = 26 [SC0] Size of queue = 2
+# T = 26 [SCO] PASS TEST empty = 0 full = 0
+# T = 27 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 10110101, dout = 00000000, full = 0, empty = 0
+# T = 30 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 10110101, dout = 00000000, full = 0, empty = 0
+# T = 36 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 10110101, dout = 00000000, full = 0, empty = 0
+# T = 36 [SCO] Write enable accept
+# T = 36 [SCO] Queue = [ 00010000 00110000 10110101 ]
+# T = 36 [SC0] Size of queue = 3
+# T = 36 [SCO] PASS TEST empty = 0 full = 0
+# T = 37 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 10110110, dout = 00000000, full = 0, empty = 0
+# T = 40 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 10110110, dout = 00000000, full = 0, empty = 0
+# T = 46 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 10110110, dout = 00000000, full = 0, empty = 0
+# T = 46 [SCO] Write enable accept
+# T = 46 [SCO] Queue = [ 00010000 00110000 10110101 10110110 ]
+# T = 46 [SC0] Size of queue = 4
+# T = 46 [SCO] PASS TEST empty = 0 full = 0
+# T = 47 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 00010100, dout = 00000000, full = 0, empty = 0
+# T = 50 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 00010100, dout = 00000000, full = 0, empty = 0
+# T = 56 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 00010100, dout = 00000000, full = 0, empty = 0
+# T = 56 [SCO] Write enable accept
+# T = 56 [SCO] Queue = [ 00010000 00110000 10110101 10110110 00010100 ]
+# T = 56 [SC0] Size of queue = 5
+# T = 56 [SCO] PASS TEST empty = 0 full = 0
+# T = 57 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 11011111, dout = 00000000, full = 0, empty = 0
+# T = 60 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 11011111, dout = 00000000, full = 0, empty = 0
+# T = 66 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 11011111, dout = 00000000, full = 0, empty = 0
+# T = 66 [SCO] Write enable accept
+# T = 66 [SCO] Queue = [ 00010000 00110000 10110101 10110110 00010100 11011111 ]
+# T = 66 [SC0] Size of queue = 6
+# T = 66 [SCO] PASS TEST empty = 0 full = 0
+# T = 67 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 10111011, dout = 00000000, full = 0, empty = 0
+# T = 70 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 10111011, dout = 00000000, full = 0, empty = 0
+# T = 76 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 10111011, dout = 00000000, full = 0, empty = 0
+# T = 76 [SCO] Write enable accept
+# T = 76 [SCO] Queue = [ 00010000 00110000 10110101 10110110 00010100 11011111 10111011 ]
+# T = 76 [SC0] Size of queue = 7
+# T = 76 [SCO] PASS TEST empty = 0 full = 0
+# T = 77 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 11101011, dout = 00000000, full = 0, empty = 0
+# T = 80 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 11101011, dout = 00000000, full = 0, empty = 0
+# T = 86 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 11101011, dout = 00000000, full = 1, empty = 0
+# T = 86 [SCO] Write enable accept
+# T = 86 [SCO] Queue = [ 00010000 00110000 10110101 10110110 00010100 11011111 10111011 11101011 ]
+# T = 86 [SC0] Size of queue = 8
+# T = 86 [SCO] PASS TEST empty = 0 full = 1
+# T = 87 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 90 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 96 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00010000, full = 0, empty = 0
+# T = 96 [SCO] Read enable accept
+# T = 96 [SCO] Queue = [ 00110000 10110101 10110110 00010100 11011111 10111011 11101011 ]
+# T = 96 [SC0] Size of queue = 7
+# T = 96 [SCO] PASS TEST dout = 00010000 empty = 0 full = 0
+# T = 97 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 100 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 106 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00110000, full = 0, empty = 0
+# T = 106 [SCO] Read enable accept
+# T = 106 [SCO] Queue = [ 10110101 10110110 00010100 11011111 10111011 11101011 ]
+# T = 106 [SC0] Size of queue = 6
+# T = 106 [SCO] PASS TEST dout = 00110000 empty = 0 full = 0
+# T = 107 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 110 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 116 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 10110101, full = 0, empty = 0
+# T = 116 [SCO] Read enable accept
+# T = 116 [SCO] Queue = [ 10110110 00010100 11011111 10111011 11101011 ]
+# T = 116 [SC0] Size of queue = 5
+# T = 116 [SCO] PASS TEST dout = 10110101 empty = 0 full = 0
+# T = 117 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 120 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 126 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 10110110, full = 0, empty = 0
+# T = 126 [SCO] Read enable accept
+# T = 126 [SCO] Queue = [ 00010100 11011111 10111011 11101011 ]
+# T = 126 [SC0] Size of queue = 4
+# T = 126 [SCO] PASS TEST dout = 10110110 empty = 0 full = 0
+# T = 127 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 130 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 136 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00010100, full = 0, empty = 0
+# T = 136 [SCO] Read enable accept
+# T = 136 [SCO] Queue = [ 11011111 10111011 11101011 ]
+# T = 136 [SC0] Size of queue = 3
+# T = 136 [SCO] PASS TEST dout = 00010100 empty = 0 full = 0
+# T = 137 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 140 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 146 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 11011111, full = 0, empty = 0
+# T = 146 [SCO] Read enable accept
+# T = 146 [SCO] Queue = [ 10111011 11101011 ]
+# T = 146 [SC0] Size of queue = 2
+# T = 146 [SCO] PASS TEST dout = 11011111 empty = 0 full = 0
+# T = 147 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 150 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 156 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 10111011, full = 0, empty = 0
+# T = 156 [SCO] Read enable accept
+# T = 156 [SCO] Queue = [ 11101011 ]
+# T = 156 [SC0] Size of queue = 1
+# T = 156 [SCO] PASS TEST dout = 10111011 empty = 0 full = 0
+# T = 157 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 160 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 166 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 11101011, full = 0, empty = 1
+# T = 166 [SCO] Read enable accept
+# T = 166 [SCO] Queue = [ ]
+# T = 166 [SC0] Size of queue = 0
+# T = 166 [SCO] PASS TEST dout = 11101011 empty = 1 full = 0
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# --- [TC_10] Round 2: Pointer Wrap-around ---
+# T = 167 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 01000001, dout = 00000000, full = 0, empty = 0
+# T = 170 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 01000001, dout = 00000000, full = 0, empty = 0
+# T = 176 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 01000001, dout = 11101011, full = 0, empty = 0
+# T = 176 [SCO] Write enable accept
+# T = 176 [SCO] Queue = [ 01000001 ]
+# T = 176 [SC0] Size of queue = 1
+# T = 176 [SCO] PASS TEST empty = 0 full = 0
+# T = 177 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 01000000, dout = 00000000, full = 0, empty = 0
+# T = 180 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 01000000, dout = 00000000, full = 0, empty = 0
+# T = 186 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 01000000, dout = 11101011, full = 0, empty = 0
+# T = 186 [SCO] Write enable accept
+# T = 186 [SCO] Queue = [ 01000001 01000000 ]
+# T = 186 [SC0] Size of queue = 2
+# T = 186 [SCO] PASS TEST empty = 0 full = 0
+# T = 187 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 10001010, dout = 00000000, full = 0, empty = 0
+# T = 190 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 10001010, dout = 00000000, full = 0, empty = 0
+# T = 196 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 10001010, dout = 11101011, full = 0, empty = 0
+# T = 196 [SCO] Write enable accept
+# T = 196 [SCO] Queue = [ 01000001 01000000 10001010 ]
+# T = 196 [SC0] Size of queue = 3
+# T = 196 [SCO] PASS TEST empty = 0 full = 0
+# T = 197 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 00000011, dout = 00000000, full = 0, empty = 0
+# T = 200 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 00000011, dout = 00000000, full = 0, empty = 0
+# T = 206 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 00000011, dout = 11101011, full = 0, empty = 0
+# T = 206 [SCO] Write enable accept
+# T = 206 [SCO] Queue = [ 01000001 01000000 10001010 00000011 ]
+# T = 206 [SC0] Size of queue = 4
+# T = 206 [SCO] PASS TEST empty = 0 full = 0
+# T = 207 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 11111100, dout = 00000000, full = 0, empty = 0
+# T = 210 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 11111100, dout = 00000000, full = 0, empty = 0
+# T = 216 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 11111100, dout = 11101011, full = 0, empty = 0
+# T = 216 [SCO] Write enable accept
+# T = 216 [SCO] Queue = [ 01000001 01000000 10001010 00000011 11111100 ]
+# T = 216 [SC0] Size of queue = 5
+# T = 216 [SCO] PASS TEST empty = 0 full = 0
+# T = 217 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 01011101, dout = 00000000, full = 0, empty = 0
+# T = 220 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 01011101, dout = 00000000, full = 0, empty = 0
+# T = 226 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 01011101, dout = 11101011, full = 0, empty = 0
+# T = 226 [SCO] Write enable accept
+# T = 226 [SCO] Queue = [ 01000001 01000000 10001010 00000011 11111100 01011101 ]
+# T = 226 [SC0] Size of queue = 6
+# T = 226 [SCO] PASS TEST empty = 0 full = 0
+# T = 227 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 00011101, dout = 00000000, full = 0, empty = 0
+# T = 230 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 00011101, dout = 00000000, full = 0, empty = 0
+# T = 236 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 00011101, dout = 11101011, full = 0, empty = 0
+# T = 236 [SCO] Write enable accept
+# T = 236 [SCO] Queue = [ 01000001 01000000 10001010 00000011 11111100 01011101 00011101 ]
+# T = 236 [SC0] Size of queue = 7
+# T = 236 [SCO] PASS TEST empty = 0 full = 0
+# T = 237 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 01101010, dout = 00000000, full = 0, empty = 0
+# T = 240 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 01101010, dout = 00000000, full = 0, empty = 0
+# T = 246 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 01101010, dout = 11101011, full = 1, empty = 0
+# T = 246 [SCO] Write enable accept
+# T = 246 [SCO] Queue = [ 01000001 01000000 10001010 00000011 11111100 01011101 00011101 01101010 ]
+# T = 246 [SC0] Size of queue = 8
+# T = 246 [SCO] PASS TEST empty = 0 full = 1
+# T = 247 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 250 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 256 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 01000001, full = 0, empty = 0
+# T = 256 [SCO] Read enable accept
+# T = 256 [SCO] Queue = [ 01000000 10001010 00000011 11111100 01011101 00011101 01101010 ]
+# T = 256 [SC0] Size of queue = 7
+# T = 256 [SCO] PASS TEST dout = 01000001 empty = 0 full = 0
+# T = 257 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 260 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 266 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 01000000, full = 0, empty = 0
+# T = 266 [SCO] Read enable accept
+# T = 266 [SCO] Queue = [ 10001010 00000011 11111100 01011101 00011101 01101010 ]
+# T = 266 [SC0] Size of queue = 6
+# T = 266 [SCO] PASS TEST dout = 01000000 empty = 0 full = 0
+# T = 267 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 270 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 276 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 10001010, full = 0, empty = 0
+# T = 276 [SCO] Read enable accept
+# T = 276 [SCO] Queue = [ 00000011 11111100 01011101 00011101 01101010 ]
+# T = 276 [SC0] Size of queue = 5
+# T = 276 [SCO] PASS TEST dout = 10001010 empty = 0 full = 0
+# T = 277 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 280 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 286 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000011, full = 0, empty = 0
+# T = 286 [SCO] Read enable accept
+# T = 286 [SCO] Queue = [ 11111100 01011101 00011101 01101010 ]
+# T = 286 [SC0] Size of queue = 4
+# T = 286 [SCO] PASS TEST dout = 00000011 empty = 0 full = 0
+# T = 287 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 290 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 296 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 11111100, full = 0, empty = 0
+# T = 296 [SCO] Read enable accept
+# T = 296 [SCO] Queue = [ 01011101 00011101 01101010 ]
+# T = 296 [SC0] Size of queue = 3
+# T = 296 [SCO] PASS TEST dout = 11111100 empty = 0 full = 0
+# T = 297 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 300 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 306 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 01011101, full = 0, empty = 0
+# T = 306 [SCO] Read enable accept
+# T = 306 [SCO] Queue = [ 00011101 01101010 ]
+# T = 306 [SC0] Size of queue = 2
+# T = 306 [SCO] PASS TEST dout = 01011101 empty = 0 full = 0
+# T = 307 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 310 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 316 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00011101, full = 0, empty = 0
+# T = 316 [SCO] Read enable accept
+# T = 316 [SCO] Queue = [ 01101010 ]
+# T = 316 [SC0] Size of queue = 1
+# T = 316 [SCO] PASS TEST dout = 00011101 empty = 0 full = 0
+# T = 317 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 320 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 326 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 01101010, full = 0, empty = 1
+# T = 326 [SCO] Read enable accept
+# T = 326 [SCO] Queue = [ ]
+# T = 326 [SC0] Size of queue = 0
+# T = 326 [SCO] PASS TEST dout = 01101010 empty = 1 full = 0
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# --- [TC_10] Round 3: Alternating Write & Read ---
+# T = 327 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 00010110, dout = 00000000, full = 0, empty = 0
+# T = 330 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 00010110, dout = 00000000, full = 0, empty = 0
+# T = 336 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 00010110, dout = 01101010, full = 0, empty = 0
+# T = 336 [SCO] Write enable accept
+# T = 336 [SCO] Queue = [ 00010110 ]
+# T = 336 [SC0] Size of queue = 1
+# T = 336 [SCO] PASS TEST empty = 0 full = 0
+# T = 337 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 340 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 346 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00010110, full = 0, empty = 1
+# T = 346 [SCO] Read enable accept
+# T = 346 [SCO] Queue = [ ]
+# T = 346 [SC0] Size of queue = 0
+# T = 346 [SCO] PASS TEST dout = 00010110 empty = 1 full = 0
+# T = 347 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 00111111, dout = 00000000, full = 0, empty = 0
+# T = 350 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 00111111, dout = 00000000, full = 0, empty = 0
+# T = 356 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 00111111, dout = 00010110, full = 0, empty = 0
+# T = 356 [SCO] Write enable accept
+# T = 356 [SCO] Queue = [ 00111111 ]
+# T = 356 [SC0] Size of queue = 1
+# T = 356 [SCO] PASS TEST empty = 0 full = 0
+# T = 357 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 360 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 366 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00111111, full = 0, empty = 1
+# T = 366 [SCO] Read enable accept
+# T = 366 [SCO] Queue = [ ]
+# T = 366 [SC0] Size of queue = 0
+# T = 366 [SCO] PASS TEST dout = 00111111 empty = 1 full = 0
+# T = 367 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 00100011, dout = 00000000, full = 0, empty = 0
+# T = 370 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 00100011, dout = 00000000, full = 0, empty = 0
+# T = 376 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 00100011, dout = 00111111, full = 0, empty = 0
+# T = 376 [SCO] Write enable accept
+# T = 376 [SCO] Queue = [ 00100011 ]
+# T = 376 [SC0] Size of queue = 1
+# T = 376 [SCO] PASS TEST empty = 0 full = 0
+# T = 377 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 380 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 386 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00100011, full = 0, empty = 1
+# T = 386 [SCO] Read enable accept
+# T = 386 [SCO] Queue = [ ]
+# T = 386 [SC0] Size of queue = 0
+# T = 386 [SCO] PASS TEST dout = 00100011 empty = 1 full = 0
+# T = 387 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 10101000, dout = 00000000, full = 0, empty = 0
+# T = 390 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 10101000, dout = 00000000, full = 0, empty = 0
+# T = 396 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 10101000, dout = 00100011, full = 0, empty = 0
+# T = 396 [SCO] Write enable accept
+# T = 396 [SCO] Queue = [ 10101000 ]
+# T = 396 [SC0] Size of queue = 1
+# T = 396 [SCO] PASS TEST empty = 0 full = 0
+# T = 397 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 400 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 406 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 10101000, full = 0, empty = 1
+# T = 406 [SCO] Read enable accept
+# T = 406 [SCO] Queue = [ ]
+# T = 406 [SC0] Size of queue = 0
+# T = 406 [SCO] PASS TEST dout = 10101000 empty = 1 full = 0
+# T = 407 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 10010000, dout = 00000000, full = 0, empty = 0
+# T = 410 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 10010000, dout = 00000000, full = 0, empty = 0
+# T = 416 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 10010000, dout = 10101000, full = 0, empty = 0
+# T = 416 [SCO] Write enable accept
+# T = 416 [SCO] Queue = [ 10010000 ]
+# T = 416 [SC0] Size of queue = 1
+# T = 416 [SCO] PASS TEST empty = 0 full = 0
+# T = 417 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 420 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 426 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 10010000, full = 0, empty = 1
+# T = 426 [SCO] Read enable accept
+# T = 426 [SCO] Queue = [ ]
+# T = 426 [SC0] Size of queue = 0
+# T = 426 [SCO] PASS TEST dout = 10010000 empty = 1 full = 0
+# T = 427 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 00100101, dout = 00000000, full = 0, empty = 0
+# T = 430 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 00100101, dout = 00000000, full = 0, empty = 0
+# T = 436 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 00100101, dout = 10010000, full = 0, empty = 0
+# T = 436 [SCO] Write enable accept
+# T = 436 [SCO] Queue = [ 00100101 ]
+# T = 436 [SC0] Size of queue = 1
+# T = 436 [SCO] PASS TEST empty = 0 full = 0
+# T = 437 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 440 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 446 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00100101, full = 0, empty = 1
+# T = 446 [SCO] Read enable accept
+# T = 446 [SCO] Queue = [ ]
+# T = 446 [SC0] Size of queue = 0
+# T = 446 [SCO] PASS TEST dout = 00100101 empty = 1 full = 0
+# T = 447 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 10000010, dout = 00000000, full = 0, empty = 0
+# T = 450 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 10000010, dout = 00000000, full = 0, empty = 0
+# T = 456 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 10000010, dout = 00100101, full = 0, empty = 0
+# T = 456 [SCO] Write enable accept
+# T = 456 [SCO] Queue = [ 10000010 ]
+# T = 456 [SC0] Size of queue = 1
+# T = 456 [SCO] PASS TEST empty = 0 full = 0
+# T = 457 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 460 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 466 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 10000010, full = 0, empty = 1
+# T = 466 [SCO] Read enable accept
+# T = 466 [SCO] Queue = [ ]
+# T = 466 [SC0] Size of queue = 0
+# T = 466 [SCO] PASS TEST dout = 10000010 empty = 1 full = 0
+# T = 467 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 01011011, dout = 00000000, full = 0, empty = 0
+# T = 470 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 01011011, dout = 00000000, full = 0, empty = 0
+# T = 476 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 01011011, dout = 10000010, full = 0, empty = 0
+# T = 476 [SCO] Write enable accept
+# T = 476 [SCO] Queue = [ 01011011 ]
+# T = 476 [SC0] Size of queue = 1
+# T = 476 [SCO] PASS TEST empty = 0 full = 0
+# T = 477 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 480 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 486 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 01011011, full = 0, empty = 1
+# T = 486 [SCO] Read enable accept
+# T = 486 [SCO] Queue = [ ]
+# T = 486 [SC0] Size of queue = 0
+# T = 486 [SCO] PASS TEST dout = 01011011 empty = 1 full = 0
+# T = 487 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 11110010, dout = 00000000, full = 0, empty = 0
+# T = 490 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 11110010, dout = 00000000, full = 0, empty = 0
+# T = 496 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 11110010, dout = 01011011, full = 0, empty = 0
+# T = 496 [SCO] Write enable accept
+# T = 496 [SCO] Queue = [ 11110010 ]
+# T = 496 [SC0] Size of queue = 1
+# T = 496 [SCO] PASS TEST empty = 0 full = 0
+# T = 497 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 500 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 506 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 11110010, full = 0, empty = 1
+# T = 506 [SCO] Read enable accept
+# T = 506 [SCO] Queue = [ ]
+# T = 506 [SC0] Size of queue = 0
+# T = 506 [SCO] PASS TEST dout = 11110010 empty = 1 full = 0
+# T = 507 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 00110001, dout = 00000000, full = 0, empty = 0
+# T = 510 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 00110001, dout = 00000000, full = 0, empty = 0
+# T = 516 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 00110001, dout = 11110010, full = 0, empty = 0
+# T = 516 [SCO] Write enable accept
+# T = 516 [SCO] Queue = [ 00110001 ]
+# T = 516 [SC0] Size of queue = 1
+# T = 516 [SCO] PASS TEST empty = 0 full = 0
+# T = 517 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 520 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 526 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00110001, full = 0, empty = 1
+# T = 526 [SCO] Read enable accept
+# T = 526 [SCO] Queue = [ ]
+# T = 526 [SC0] Size of queue = 0
+# T = 526 [SCO] PASS TEST dout = 00110001 empty = 1 full = 0
+# T = 527 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 11001101, dout = 00000000, full = 0, empty = 0
+# T = 530 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 11001101, dout = 00000000, full = 0, empty = 0
+# T = 536 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 11001101, dout = 00110001, full = 0, empty = 0
+# T = 536 [SCO] Write enable accept
+# T = 536 [SCO] Queue = [ 11001101 ]
+# T = 536 [SC0] Size of queue = 1
+# T = 536 [SCO] PASS TEST empty = 0 full = 0
+# T = 537 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 540 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 546 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 11001101, full = 0, empty = 1
+# T = 546 [SCO] Read enable accept
+# T = 546 [SCO] Queue = [ ]
+# T = 546 [SC0] Size of queue = 0
+# T = 546 [SCO] PASS TEST dout = 11001101 empty = 1 full = 0
+# T = 547 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 01100100, dout = 00000000, full = 0, empty = 0
+# T = 550 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 01100100, dout = 00000000, full = 0, empty = 0
+# T = 556 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 01100100, dout = 11001101, full = 0, empty = 0
+# T = 556 [SCO] Write enable accept
+# T = 556 [SCO] Queue = [ 01100100 ]
+# T = 556 [SC0] Size of queue = 1
+# T = 556 [SCO] PASS TEST empty = 0 full = 0
+# T = 557 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 560 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 566 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 01100100, full = 0, empty = 1
+# T = 566 [SCO] Read enable accept
+# T = 566 [SCO] Queue = [ ]
+# T = 566 [SC0] Size of queue = 0
+# T = 566 [SCO] PASS TEST dout = 01100100 empty = 1 full = 0
+# T = 567 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 00101011, dout = 00000000, full = 0, empty = 0
+# T = 570 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 00101011, dout = 00000000, full = 0, empty = 0
+# T = 576 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 00101011, dout = 01100100, full = 0, empty = 0
+# T = 576 [SCO] Write enable accept
+# T = 576 [SCO] Queue = [ 00101011 ]
+# T = 576 [SC0] Size of queue = 1
+# T = 576 [SCO] PASS TEST empty = 0 full = 0
+# T = 577 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 580 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 586 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00101011, full = 0, empty = 1
+# T = 586 [SCO] Read enable accept
+# T = 586 [SCO] Queue = [ ]
+# T = 586 [SC0] Size of queue = 0
+# T = 586 [SCO] PASS TEST dout = 00101011 empty = 1 full = 0
+# T = 587 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 11101010, dout = 00000000, full = 0, empty = 0
+# T = 590 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 11101010, dout = 00000000, full = 0, empty = 0
+# T = 596 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 11101010, dout = 00101011, full = 0, empty = 0
+# T = 596 [SCO] Write enable accept
+# T = 596 [SCO] Queue = [ 11101010 ]
+# T = 596 [SC0] Size of queue = 1
+# T = 596 [SCO] PASS TEST empty = 0 full = 0
+# T = 597 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 600 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 606 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 11101010, full = 0, empty = 1
+# T = 606 [SCO] Read enable accept
+# T = 606 [SCO] Queue = [ ]
+# T = 606 [SC0] Size of queue = 0
+# T = 606 [SCO] PASS TEST dout = 11101010 empty = 1 full = 0
+# T = 607 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 10010001, dout = 00000000, full = 0, empty = 0
+# T = 610 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 10010001, dout = 00000000, full = 0, empty = 0
+# T = 616 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 10010001, dout = 11101010, full = 0, empty = 0
+# T = 616 [SCO] Write enable accept
+# T = 616 [SCO] Queue = [ 10010001 ]
+# T = 616 [SC0] Size of queue = 1
+# T = 616 [SCO] PASS TEST empty = 0 full = 0
+# T = 617 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 620 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 626 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 10010001, full = 0, empty = 1
+# T = 626 [SCO] Read enable accept
+# T = 626 [SCO] Queue = [ ]
+# T = 626 [SC0] Size of queue = 0
+# T = 626 [SCO] PASS TEST dout = 10010001 empty = 1 full = 0
+# T = 627 [GEN] rst_n = 1, wr_en = 1, rd_en = 0, din = 11110110, dout = 00000000, full = 0, empty = 0
+# T = 630 [DRV] rst_n = 1, wr_en = 1, rd_en = 0, din = 11110110, dout = 00000000, full = 0, empty = 0
+# T = 636 [MON] rst_n = 1, wr_en = 1, rd_en = 0, din = 11110110, dout = 10010001, full = 0, empty = 0
+# T = 636 [SCO] Write enable accept
+# T = 636 [SCO] Queue = [ 11110110 ]
+# T = 636 [SC0] Size of queue = 1
+# T = 636 [SCO] PASS TEST empty = 0 full = 0
+# T = 637 [GEN] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 640 [DRV] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 00000000, full = 0, empty = 0
+# T = 646 [MON] rst_n = 1, wr_en = 0, rd_en = 1, din = 00000000, dout = 11110110, full = 0, empty = 1
+# T = 646 [SCO] Read enable accept
+# T = 646 [SCO] Queue = [ ]
+# T = 646 [SC0] Size of queue = 0
+# T = 646 [SCO] PASS TEST dout = 11110110 empty = 1 full = 0
+# ============================================
+#             SCOBOARD FINAL REPORT           
+# ============================================
+#    Total Resets processed: 1
+#    Total Writes processed: 32
+#    Total Reads processed: 32
+#    Total pass cnt: 65
+#    Total fail cnt: 0
+# T = 647 [TB] Ket thuc mo phong!
+# ** Note: $finish    : /home/hieu/make_file_for_questasim/project/buoi6/tb/top_module_tb.sv(152)
+#    Time: 647 ns  Iteration: 0  Instance: /top_module_tb
+# Saving coverage database on exit...
+# End time: 14:43:51 on Sep 22,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

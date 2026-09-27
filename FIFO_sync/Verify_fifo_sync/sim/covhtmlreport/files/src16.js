@@ -1,0 +1,2 @@
+var g_data = {"name":"/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_06_read_while_empty.sv","src":"\n\nclass tc_06_read_while_empty #(parameter int DATA_WIDTH = 8, parameter int DEPTH = 8)\n  extends tc_base #(DATA_WIDTH, DEPTH);\n\n  function new(generator #(DATA_WIDTH) gen);\n    super.new(\"tc_06_read_while_empty\", gen);\n  endfunction\n\n  task run();\n    $display(\"T = %0t TC_06 read while empty\", $time);\n    gen.reset_fifo();\n    gen.read();\n  endtask\nendclass\n","lang":"verilog"};
+processSrcData(g_data);

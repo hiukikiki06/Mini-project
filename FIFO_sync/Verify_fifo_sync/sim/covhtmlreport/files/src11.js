@@ -1,0 +1,2 @@
+var g_data = {"name":"/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_01_reset.sv","src":"\nclass tc_01_reset #(parameter int DATA_WIDTH = 8, parameter int DEPTH = 8)\n  extends tc_base #(DATA_WIDTH, DEPTH);\n\n  function new(generator #(DATA_WIDTH) gen);\n    super.new(\"tc_01_reset\", gen);\n  endfunction\n\n\n  task run();\n    $display(\"T = %0t TC_01 reset\", $time);\n    gen.reset_fifo();\n    gen.write(8'hA5);\n\n    // reset fifo again\n    gen.reset_fifo();\n    gen.read();\n  endtask\nendclass\n","lang":"verilog"};
+processSrcData(g_data);

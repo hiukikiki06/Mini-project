@@ -1,0 +1,2 @@
+var g_data = {"name":"/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_trans.sv","src":"\nclass transaction #(parameter int DATA_WIDTH = 8);\n  bit rst_n;\n  bit wr_en;\n  bit rd_en;\n  bit [DATA_WIDTH -1 : 0] din;\n  bit [DATA_WIDTH -1 : 0] dout;\n  bit full;\n  bit empty;\n\n  function void display(string tag);\n    $display(\"T = %0t %s rst_n = %0b, wr_en = %0b, rd_en = %0b, din = %b, dout = %b, full = %0b, empty = %0b\", $time, tag, rst_n, wr_en, rd_en, din, dout, full, empty);\n  endfunction\nendclass","lang":"verilog"};
+processSrcData(g_data);

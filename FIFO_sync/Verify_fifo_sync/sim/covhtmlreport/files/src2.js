@@ -1,0 +1,2 @@
+var g_data = {"name":"/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_pkg.sv","src":"package tb_fifo_sync_pkg;\n    parameter DATA_WIDTH = 8;\n    parameter DEPTH = 8;\n    `include \"tb_fifo_sync_trans.sv\"\n    `include \"tb_fifo_sync_gen.sv\"\n    `include \"tb_fifo_sync_drv.sv\"\n    `include \"tb_fifo_sync_mon.sv\"\n    `include \"tb_fifo_sync_sco.sv\"\n    `include \"tb_fifo_sync_env.sv\"\nendpackage :  tb_fifo_sync_pkg","lang":"verilog"};
+processSrcData(g_data);
