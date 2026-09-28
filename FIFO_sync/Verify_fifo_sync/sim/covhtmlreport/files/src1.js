@@ -1,2 +1,0 @@
-var g_data = {"name":"/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_interface.sv","src":"interface intf #(parameter int DATA_WIDTH = 8) (input clk);\n  logic rst_n;\n  logic wr_en;\n  logic rd_en;\n  logic [DATA_WIDTH -1 : 0] din;\n  logic [DATA_WIDTH -1 : 0] dout;\n  logic full;\n  logic empty;\nendinterface\n\n\n","lang":"verilog"};
-processSrcData(g_data);

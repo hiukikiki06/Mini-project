@@ -1,2 +1,0 @@
-var g_data = {"name":"/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_02_normal_write.sv","src":"class tc_02_normal_write #(parameter int DATA_WIDTH = 8, parameter int DEPTH = 8)\nextends tc_base #(DATA_WIDTH, DEPTH);\n\n\n    function new(generator #(DATA_WIDTH) gen);\n        super.new(\"tc_02_normal_write\", gen);\n    endfunction\n\n    task run();\n        $display(\"T = %0t TC_02 normal write\", $time);\n        gen.reset_fifo();\n        gen.write(8'hA5);\n        gen.write(8'hB5);\n    endtask\nendclass","lang":"verilog"};
-processSrcData(g_data);

@@ -1,12 +1,14 @@
 
-class monitor ;
-  transaction #(8) t;
+class monitor #(parameter DATA_WIDTH = 8) ;
+  transaction #(DATA_WIDTH) t;
   mailbox mbx;
-  virtual intf #(8) vif;
-  int i;
-  function  new(mailbox mbx, virtual intf vif);
+  mailbox mon2cov;
+  virtual intf #(DATA_WIDTH) vif;
+
+  function new(mailbox mbx, virtual intf #(DATA_WIDTH) vif, mailbox mon2cov );
     this.mbx = mbx;
     this.vif = vif;
+    this.mon2cov = mon2cov;
   endfunction
 
   task run();
@@ -24,6 +26,7 @@ class monitor ;
       t.full = vif.full;
       t.empty = vif.empty;
       mbx.put(t);
+      mon2cov.put(t);
       t.display("[MON]");
     end
   endtask

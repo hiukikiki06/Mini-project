@@ -4,6 +4,12 @@ z2
 Z0 !s99 nomlopt
 R0
 R0
+R0
+R0
+R0
+R0
+R0
+R0
 !s11f vlog 2021.2_1 2021.05, May 15 2021
 13
 !s112 1.1
@@ -11,175 +17,162 @@ R0
 !i10e 25
 !i10f 100
 cModel Technology
-Z1 d/home/hieu/make_file_for_questasim/project/buoi6/sim
+Z1 d/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/sim
 T_opt
-Z2 !s11d tb_fifo_sync_pkg /home/hieu/make_file_for_questasim/project/buoi6/sim/work 1 intf 1 /home/hieu/make_file_for_questasim/project/buoi6/sim/work 
-!s110 1790062685
-V2N_QS]EUZSBcXoo[L>9Oo3
-Z3 04 13 4 work top_module_tb fast 0
-=1-000ae431a4f1-6ab2305d-43f4a-27a7a
-Z4 !s124 OEM100
+!s11d tb_fifo_sync_pkg /home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/sim/work 1 intf 1 /home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/sim/work 
+!s110 1790583231
+V]V`XIUlSVGbhSFdiz9i?Z2
+04 13 4 work top_module_tb fast 0
+=1-000ae431a4f1-6aba21bf-97980-e020
+!s124 OEM100
 o-quiet -auto_acc_if_foreign -work work -debugdb +acc
-Z5 tCvgOpt 0
+Z2 tCvgOpt 0
 n@_opt
-Z6 OL;O;2021.2_1;73
-R1
-T_opt1
-R2
-!s110 1790062904
-V3nR=ezY8aMe^1=iY9c;WJ1
-R3
-=1-000ae431a4f1-6ab23138-62caf-282ae
-Z7 !s102 +cover=bcesft
-R4
-o-quiet -auto_acc_if_foreign -work work +cover=bcesft
-R5
-n@_opt1
-R6
-R1
+OL;O;2021.2_1;73
 Yintf
-Z8 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z9 !s110 1790063029
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z4 !s110 1790583229
 !i10b 1
 !s100 M2?A<zO?MkJTbj6Xf<6TV2
-IX65kjiWbHKG`7Qf8>SGlW2
+Id;clkYJWU<DVgjM:L>_HP0
 S1
 R1
 w1789974325
-8/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_interface.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_interface.sv
-!i122 3
-Z10 L0 1 0
-Z11 VDg1SIo80bB@j0V0VzS_@n1
-Z12 OL;L;2021.2_1;73
+8/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/tb_fifo_sync_interface.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/tb_fifo_sync_interface.sv
+!i122 15
+Z5 L0 1 0
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2021.2_1;73
 r1
 !s85 0
 31
-Z13 !s108 1790063029.000000
-!s107 /home/hieu/make_file_for_questasim/project/buoi6/tc/tc_10_fifo_ordering_and_wrap_around.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_09_simultaneous_read_and_write_while_empty.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_08_simutaneous_read_write_while_full.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_07_simultaneous_read_and_write.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_06_read_while_empty.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_05_normal_read.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_04_write_while_full.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_03_fill_fifo_to_full.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_02_normal_write.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_01_reset.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_base.sv|/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_env.sv|/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_sco.sv|/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_mon.sv|/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_drv.sv|/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_gen.sv|/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_trans.sv|/home/hieu/make_file_for_questasim/project/buoi6/tb/top_module_tb.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_fifo_sync_pkg.sv|/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_interface.sv|/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_pkg.sv|/home/hieu/make_file_for_questasim/project/buoi6/rtl/top.sv|
-Z14 !s90 +cover=bcesft|-f|../compile.f|
+Z8 !s108 1790583229.000000
+Z9 !s107 /home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_10_fifo_ordering_and_wrap_around.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_09_simultaneous_read_and_write_while_empty.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_08_simutaneous_read_write_while_full.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_07_simultaneous_read_and_write.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_06_read_while_empty.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_05_normal_read.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_04_write_while_full.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_03_fill_fifo_to_full.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_02_normal_write.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_01_reset.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_base.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/tb_fifo_sync_env.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/tb_fifo_sync_sco.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/tb_package_coverage.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/tb_fifo_sync_mon.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/tb_fifo_sync_drv.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/tb_fifo_sync_gen.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/tb_fifo_sync_trans.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/top_module_tb.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_fifo_sync_pkg.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/tb_fifo_sync_pkg.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/tb_fifo_sync_interface.sv|/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/rtl/top.sv|
+Z10 !s90 -f|../compile.f|+incdir+../rtl|
 !i113 0
-R7
-Z15 o+cover=bcesft -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R5
+Z11 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 !s92 +incdir+../rtl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
 vsync_fifo
-R8
-R9
+R3
+R4
 !i10b 1
 !s100 1cIo0CVbQYd3H>dB=SUKZ0
-IAZ57J5F;IeG78^P8H[LOD2
+I^_ohEXg0PiC78jXEZ2S1<0
 S1
 R1
 w1789828822
-8/home/hieu/make_file_for_questasim/project/buoi6/rtl/top.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/rtl/top.sv
-!i122 3
+8/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/rtl/top.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/rtl/top.sv
+!i122 15
 L0 1 54
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
 R11
 R12
-r1
-!s85 0
-31
-R13
-Z16 !s107 /home/hieu/make_file_for_questasim/project/buoi6/tc/tc_10_fifo_ordering_and_wrap_around.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_09_simultaneous_read_and_write_while_empty.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_08_simutaneous_read_write_while_full.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_07_simultaneous_read_and_write.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_06_read_while_empty.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_05_normal_read.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_04_write_while_full.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_03_fill_fifo_to_full.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_02_normal_write.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_01_reset.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_base.sv|/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_env.sv|/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_sco.sv|/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_mon.sv|/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_drv.sv|/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_gen.sv|/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_trans.sv|/home/hieu/make_file_for_questasim/project/buoi6/tb/top_module_tb.sv|/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_fifo_sync_pkg.sv|/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_interface.sv|/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_pkg.sv|/home/hieu/make_file_for_questasim/project/buoi6/rtl/top.sv|
-R14
-!i113 0
-R7
-R15
-R5
+R2
 Xtb_fifo_sync_pkg
 !s115 intf
-R8
-R9
+R3
+R4
 !i10b 1
-!s100 bY;=bX_7kE1hl73D7PWAG2
-IWKFJ=C_=o:fQd5BOYYG=j0
+!s100 Vh_a1@C8V=7^;LB[cDBNN2
+I9h7o4ZAkAV@BX<9NoNNEL0
 S1
 R1
-w1790062823
-8/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_pkg.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_pkg.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_trans.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_gen.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_drv.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_mon.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_sco.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tb/tb_fifo_sync_env.sv
-!i122 3
-R10
-VWKFJ=C_=o:fQd5BOYYG=j0
-R12
+w1790581961
+8/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/tb_fifo_sync_pkg.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/tb_fifo_sync_pkg.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/tb_fifo_sync_trans.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/tb_fifo_sync_gen.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/tb_fifo_sync_drv.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/tb_fifo_sync_mon.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/tb_package_coverage.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/tb_fifo_sync_sco.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/tb_fifo_sync_env.sv
+!i122 15
+R5
+V9h7o4ZAkAV@BX<9NoNNEL0
+R7
 r1
 !s85 0
 31
-R13
-R16
-R14
-!i113 0
-R7
-R15
-R5
-Xtc_fifo_sync_pkg
 R8
-Z17 DXx4 work 16 tb_fifo_sync_pkg 0 22 WKFJ=C_=o:fQd5BOYYG=j0
 R9
+R10
+!i113 0
+R11
+R12
+R2
+Xtc_fifo_sync_pkg
+R3
+Z13 DXx4 work 16 tb_fifo_sync_pkg 0 22 9h7o4ZAkAV@BX<9NoNNEL0
+R4
 !i10b 1
 !s100 7B?9acYg^4WVk8H:1L8fT3
-IDVd84zJ_clC:RU[OgYj<n3
+IXT<[2HzN7GGDC^hDA5EBn0
 S1
 R1
 w1790062637
-8/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_fifo_sync_pkg.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_fifo_sync_pkg.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_base.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_01_reset.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_02_normal_write.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_03_fill_fifo_to_full.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_04_write_while_full.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_05_normal_read.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_06_read_while_empty.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_07_simultaneous_read_and_write.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_08_simutaneous_read_write_while_full.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_09_simultaneous_read_and_write_while_empty.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_10_fifo_ordering_and_wrap_around.sv
-!i122 3
-R10
-VDVd84zJ_clC:RU[OgYj<n3
-R12
+8/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_fifo_sync_pkg.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_fifo_sync_pkg.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_base.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_01_reset.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_02_normal_write.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_03_fill_fifo_to_full.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_04_write_while_full.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_05_normal_read.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_06_read_while_empty.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_07_simultaneous_read_and_write.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_08_simutaneous_read_write_while_full.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_09_simultaneous_read_and_write_while_empty.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tc/tc_10_fifo_ordering_and_wrap_around.sv
+!i122 15
+R5
+VXT<[2HzN7GGDC^hDA5EBn0
+R7
 r1
 !s85 0
 31
-R13
-R16
-R14
-!i113 0
-R7
-R15
-R5
-vtop_module_tb
 R8
-R17
-DXx4 work 16 tc_fifo_sync_pkg 0 22 DVd84zJ_clC:RU[OgYj<n3
 R9
-!i10b 1
-!s100 dCc7E3XA0fl]E4LkB4V@^2
-I_Egj^DCEiEZHJ]b:>=AeJ1
-S1
-R1
-w1790061899
-8/home/hieu/make_file_for_questasim/project/buoi6/tb/top_module_tb.sv
-F/home/hieu/make_file_for_questasim/project/buoi6/tb/top_module_tb.sv
-!i122 3
-L0 2 154
+R10
+!i113 0
 R11
 R12
+R2
+vtop_module_tb
+R3
+R13
+DXx4 work 16 tc_fifo_sync_pkg 0 22 XT<[2HzN7GGDC^hDA5EBn0
+R4
+!i10b 1
+!s100 9Z8^9==9S1WU`??@7CZHa3
+I7PSn2nK0KYD[nj^?7B]M<2
+S1
+R1
+w1790583226
+8/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/top_module_tb.sv
+F/home/hieu/make_file_for_questasim/project_for_verify/Verify_fifo_sync/tb/top_module_tb.sv
+!i122 15
+L0 2 156
+R6
+R7
 r1
 !s85 0
 31
-R13
-R16
-R14
+R8
+R9
+R10
 !i113 0
-R7
-R15
-R5
+R11
+R12
+R2

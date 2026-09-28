@@ -5,7 +5,7 @@ class driver #(parameter int DATA_WIDTH = 8);
   event done_drv;
   virtual intf #(DATA_WIDTH) vif;
 
-  function  new(mailbox mbx, virtual intf vif, event done_drv);
+  function  new(mailbox mbx, virtual intf #(DATA_WIDTH) vif, event done_drv);
     this.mbx = mbx;
     this.vif = vif;
     this.done_drv = done_drv;

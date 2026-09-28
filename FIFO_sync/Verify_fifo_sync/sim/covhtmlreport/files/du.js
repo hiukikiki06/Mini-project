@@ -1,2 +1,0 @@
-var g_data = {"data":[{"n":"work.intf","id":1,"zf":1,"tc":97.72,"t":97.72},{"n":"work.sync_fifo","id":5,"zf":1,"tc":90.00,"fc":50.00},{"n":"work.tb_fifo_sync_pkg","id":2,"zf":1,"tc":49.67,"s":76.64,"b":52.38,"fc":20.00},{"n":"work.tc_fifo_sync_pkg","id":3,"zf":1,"tc":35.00,"s":35.00},{"n":"work.top_module_tb","id":4,"zf":1,"tc":42.89,"s":20.68,"b":8.00}]};
-processDuData(g_data);

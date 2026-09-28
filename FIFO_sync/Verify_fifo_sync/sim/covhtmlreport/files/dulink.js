@@ -1,2 +1,0 @@
-var g_data = {"1":["work.intf",97.72,1],"5":["work.sync_fifo",90.00,1],"2":["work.tb_fifo_sync_pkg",49.67,1],"3":["work.tc_fifo_sync_pkg",35.00,1],"4":["work.top_module_tb",42.89,1]};
-processDuLinks(g_data);

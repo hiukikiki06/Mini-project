@@ -1,2 +1,0 @@
-var g_data = {"name":"/home/hieu/make_file_for_questasim/project/buoi6/tc/tc_base.sv","src":"class tc_base #(parameter int DATA_WIDTH = 8, parameter int DEPTH = 8);\n    string name;\n    generator #(DATA_WIDTH) gen;\n\n    // Đưa generator lên trước hoặc đặt giá trị mặc định (null) cho generator\n    function new(string name = \"test_case_base\", generator #(DATA_WIDTH) gen  );\n        this.name = name;\n        this.gen  = gen;\n    endfunction\n    \nendclass","lang":"verilog"};
-processSrcData(g_data);

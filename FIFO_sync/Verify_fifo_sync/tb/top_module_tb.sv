@@ -134,20 +134,22 @@ import tc_fifo_sync_pkg::*;
   initial
   begin
     env = new(vif);
-    env.run();
-
-    // Nhận testcase từ tham số dòng lệnh: vsim ... +TESTNAME=tc_02
-    if ($value$plusargs("TESTNAME=%s", test_name))
-    begin
-      $display("T = %0t [TB] Chay testcase chi dinh: %s", $time, test_name);
-      run_testcase(test_name);
-    end
-    else
-    begin
-      $display("T = %0t [TB] Khong co +TESTNAME, chay mac dinh tc_01_reset", $time);
-      run_testcase("tc_01_reset");
+    repeat(10) begin
+      env.run();
+      // Nhận testcase từ tham số dòng lệnh: vsim ... +TESTNAME=tc_02
+      if ($value$plusargs("TESTNAME=%s", test_name))
+      begin
+        $display("T = %0t [TB] Chay testcase chi dinh: %s", $time, test_name);
+        run_testcase(test_name);
+      end
+      else
+      begin
+        $display("T = %0t [TB] Khong co +TESTNAME, chay mac dinh tc_01_reset", $time);
+        run_testcase("tc_01_reset");
+      end
     end
     env.sco.report();
+    env.display_cov();
     $display("T = %0t [TB] Ket thuc mo phong!", $time);
     $finish;
   end
